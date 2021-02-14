@@ -22,11 +22,12 @@
   },
   "homepage": "https://github.com/vikpe/react-webpack-babel-starter",
   "scripts": {
-    "build": "yarn run clean-dist && webpack --config=configs/webpack/prod.js",
+    "build": "npm run build:css && yarn run clean-dist && webpack --config=configs/webpack/prod.js",
+    "build:css": "postcss src/styles/tailwind.css -o src/styles/main.css ",
     "clean-dist": "rimraf dist/*",
     "prettier-write": "prettier --write \"{src,tests}/**/*.{js,jsx,css,scss}\"",
     "prettier-check": "prettier --list-different \"{src,tests}/**/*.{js,jsx,css,scss}\"",
-    "start": "yarn run start-dev",
+    "start": "npm run build:css && yarn run start-dev",
     "start-dev": "webpack serve --config=configs/webpack/dev.js",
     "start-prod": "yarn run build && node express.js",
     "test": "jest --watchAll --coverage --config=configs/jest.json"
@@ -67,6 +68,12 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "autoprefixer": "^10.2.4",
+    "express": "^4.17.1",
+    "node": "^15.8.0",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.0",
+    "tailwindcss": "^2.0.3"
   }
 }
