@@ -34,7 +34,7 @@ openSearchModal(){
       this.state.preMatchModalOn && 
       <PreMatch/>
     }
-  <div className="shadow-lg flex flex-col justify-center items-center w-1/4 h-2/4">
+  <div className="shadow-lg flex bg-white flex-col justify-center items-center w-1/4 h-2/4">
   <h2 className="text-white-100 py-8 underline">Kings Game</h2>
   <PrimaryButton onClick={()=>this.openSearchModal()} text={"Create"}/>
   <PrimaryButton onClick={()=>this.openSearchModal()} text={"Join"}/>

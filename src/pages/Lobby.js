@@ -36,7 +36,7 @@ openSearchModal(){
       this.state.preMatchModalOn && 
       <PreMatch/>
     }
-  <div className=" flexp-4  shadow-lg w-2/4 h-4/5 ">
+  <div className=" flexp-4  bg-white shadow-lg w-2/4 h-4/5 ">
   <div className="flex justify-around flex-row ">
  <Link to={"/"}><button className="bg-blue-500 hover:bg-blue-700 h-10 text-white justify-around m-3 font-bold py-2 px-4 rounded">Back</button></Link>
   <h2 className="text-white-100 py-8 h-10 underline">Lobby</h2>

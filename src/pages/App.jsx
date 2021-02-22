@@ -8,7 +8,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="h-screen w-full font-sans">
+        <div className="h-screen w-full bg-indigo-200 font-sans">
           
         <Route exact path="/" component={Home}/>
         <Route path="/lobby" component={Lobby}/>   
